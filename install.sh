@@ -56,6 +56,6 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 
 echo '[+] Installing extra tools'
-sudo apt-get install -y zip ripgrep
+sudo apt-get install -y zip ripgrep build-essential bat nmap
 
 
