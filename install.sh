@@ -47,6 +47,10 @@ sudo curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fish
 fisher install laughedelic/pisces
 fisher install rafaelrinaldi/pure
 
+echo '[+] Setup fish'
+echo 'set -g fish_user_paths "/home/hacker/go/bin" $fish_user_paths' >> /home/hacker/.config/fish/config.fish
+sudo echo 'set -g fish_user_paths "/home/hacker/go/bin" $fish_user_paths' >> /root/.config/fish/config.fish
+
 echo '[+] Update and Install vim plugins'
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
