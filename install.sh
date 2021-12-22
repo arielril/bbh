@@ -58,6 +58,13 @@ echo '[+] Installing XSS-Strike'
 sudo git clone --depth 1 https://github.com/s0md3v/XSStrike.git /opt/xssstrike
 sudo chmod 755 /opt/xssstrike
 
+echo '[+] Installing searchsploit'
+sudo git clone --depth 1 https://github.com/offensive-security/exploitdb.git /opt/exploit-database
+sudo ln -sf /opt/exploit-database/searchsploit /usr/local/bin/searchsploit
+cp -n /opt/exploit-database/.searchsploit_rc ~/
+sudo chmod -R 755 /opt/exploit-database
+
 echo '[+] Installing extra tools'
-sudo apt-get install -y zip ripgrep build-essential bat nmap python3-pip
+sudo apt-get install -y zip ripgrep build-essential bat nmap python3-pip 
 go install github.com/tomnomnom/waybackurls@latest
+
